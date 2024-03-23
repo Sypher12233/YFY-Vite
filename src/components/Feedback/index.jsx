@@ -19,10 +19,7 @@ function Feedback() {
         </button>
       </div>
       <div className={styles["speakers-image"]}>
-        <img
-          src="./public/images/project/najafizada1.jpg"
-          alt="speakers photo"
-        />
+        <img src="/images/project/najafizada1.jpg" alt="speakers photo" />
       </div>
     </div>
   );

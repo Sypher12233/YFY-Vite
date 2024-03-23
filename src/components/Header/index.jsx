@@ -7,7 +7,7 @@ function Header() {
     <header>
       <nav className={`${styles.desktop} ${styles.mobile}`}>
         <div className={`${styles["nav-img"]}`}>
-          <img src="../../public/images/project/logo/logo.png" alt="logoImg" />
+          <img src="/images/project/logo/logo.png" alt="logoImg" />
         </div>
         {/* Nav image */}
         {/* Navigation links */}

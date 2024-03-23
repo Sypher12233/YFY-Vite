@@ -9,7 +9,7 @@ function News() {
         {/* <!-- News & Updates --> */}
         <div className={styles["news-box"]}>
           <img
-            src="./images/project/online-event-pexels-antoni-shkraba-4348404.jpg"
+            src="/images/project/online-event-pexels-antoni-shkraba-4348404.jpg"
             alt="Networking Club Image"
           />
           <div className={styles["inside-news-box"]}>
@@ -20,7 +20,7 @@ function News() {
 
         <div className={styles["news-box"]}>
           <img
-            src="./images/project/speaker-pexels-henri-mathieusaintlaurent-8349233.jpg"
+            src="/images/project/speaker-pexels-henri-mathieusaintlaurent-8349233.jpg"
             alt="Networking Club Image"
           />
           <div className={styles["inside-news-box"]}>
@@ -31,7 +31,7 @@ function News() {
 
         <div className={styles["news-box"]}>
           <img
-            src="./images/project/achievements-pexels-kampus-production-5940838.jpg"
+            src="/images/project/achievements-pexels-kampus-production-5940838.jpg"
             alt="Networking Club Image"
           />
           <div className={styles["inside-news-box"]}>
@@ -48,12 +48,12 @@ function News() {
       >
         <div className={styles["updates-box"]}>
           <img
-            src="./images/project/news-pexels-lisa-fotios-1369476.jpg"
+            src="/images/project/news-pexels-lisa-fotios-1369476.jpg"
             alt="Networking Club Image"
           />
           <div className={styles["inside-updates-box"]}>
             <div className={styles["event-date"]}>
-              <img src="./images/project/icons/icons8-calendar-100.png" />
+              <img src="/images/project/icons/icons8-calendar-100.png" />
               <time>September 3rd 2024</time>
             </div>
             <h4>Breaking News from YFY Headquarters</h4>
@@ -61,12 +61,12 @@ function News() {
         </div>
         <div className={styles["updates-box"]}>
           <img
-            src="./images/project/achievements1-pexels-fauxels-3184292.jpg"
+            src="/images/project/achievements1-pexels-fauxels-3184292.jpg"
             alt="Networking Club Image"
           />
           <div className={styles["inside-updates-box"]}>
             <div className={styles["event-date"]}>
-              <img src="./images/project/icons/icons8-calendar-100.png" />
+              <img src="/images/project/icons/icons8-calendar-100.png" />
               <time>March 17th 2024</time>
             </div>
             <h4>In the Spotlight: YFY Achievements</h4>
@@ -74,12 +74,12 @@ function News() {
         </div>
         <div className={styles["updates-box"]}>
           <img
-            src="./images/project/progress-pexels-alesia-kozik-6781273.jpg"
+            src="/images/project/progress-pexels-alesia-kozik-6781273.jpg"
             alt="Networking Club Image"
           />
           <div className={styles["inside-updates-box"]}>
             <div className={styles["event-date"]}>
-              <img src="./images/project/icons/icons8-calendar-100.png" />
+              <img src="/images/project/icons/icons8-calendar-100.png" />
               <time>January 1st 2025</time>
             </div>
             <h4>YFY Chronicles: Unveiling Our Progress</h4>

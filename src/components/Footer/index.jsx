@@ -17,14 +17,14 @@ function Footer() {
           {/* <!-- Contact Information --> */}
           <div className={styles["contact-info"]}>
             <img
-              src="./images/project/icons/icons8-phone-64.png"
+              src="/images/project/icons/icons8-phone-64.png"
               alt="phone icon"
             />
             <span>+1 (123) 456-7890</span>
           </div>
           <div className={styles["contact-info"]}>
             <img
-              src="./images/project/icons/icons8-mail-48.png"
+              src="/images/project/icons/icons8-mail-48.png"
               alt="mail icon"
             />
             <span>support@youthforyouth.com</span>
@@ -44,7 +44,7 @@ function Footer() {
           <div className={styles.tweets}>
             {/* <!-- Tweet 1 --> */}
             <div className={styles.tweet}>
-              <img src="./images/project/icons/icons8-twitter-48.png" />
+              <img src="/images/project/icons/icons8-twitter-48.png" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. #YFY
                 #Twitter
@@ -52,7 +52,7 @@ function Footer() {
             </div>
             {/* <!-- Tweet 2 --> */}
             <div className={styles.tweet}>
-              <img src="./images/project/icons/icons8-twitter-48.png" />
+              <img src="/images/project/icons/icons8-twitter-48.png" />
               <p>
                 Sed do eiusmod tempor incididunt ut labore et dolore magna
                 aliqua. #SocialMedia
@@ -60,7 +60,7 @@ function Footer() {
             </div>
             {/* <!-- Tweet 3 --> */}
             <div className={styles.tweet}>
-              <img src="./images/project/icons/icons8-twitter-48.png" />
+              <img src="/images/project/icons/icons8-twitter-48.png" />
               <p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat. #Updates
@@ -74,21 +74,21 @@ function Footer() {
           {/* <!-- Instagram Images --> */}
           <div className={styles["instagram-images"]}>
             <img
-              src="./images/project/img1-pexels-annabel-ritson-14503317.jpg"
+              src="/images/project/img1-pexels-annabel-ritson-14503317.jpg"
               alt="Instagram Post 1"
             />
             <img
-              src="./images/project/img2-pexels-beyzaa-yurtkuran-19856538.jpg"
+              src="/images/project/img2-pexels-beyzaa-yurtkuran-19856538.jpg"
               alt="Instagram Post 2"
             />
           </div>
           <div className={styles["instagram-images"]}>
             <img
-              src="./images/project/img3-pexels-efe-ersoy-20103950.jpg"
+              src="/images/project/img3-pexels-efe-ersoy-20103950.jpg"
               alt="Instagram Post 3"
             />
             <img
-              src="./images/project/img4-pexels-linh-bo-13999127.jpg"
+              src="/images/project/img4-pexels-linh-bo-13999127.jpg"
               alt="Instagram Post 4"
             />
           </div>

@@ -472,22 +472,18 @@ function ContactUs() {
       <div class={styles["social-media"]}>
         <a href="#">
           <img
-            src=""
+            src="/images/project/icons/icons8-instagram.svg"
             alt="Instagram"
           />
         </a>
         <a href="#">
           <img
-            src="C:\Users\DELL\Pictures\Saved Pictures\linkedIn_PNG8.png"
+            src="/images/project/icons/icons8-linkedin (1).svg"
             alt="LinkedIn"
           />
         </a>
         <a href="#">
-          <img
-            src="../../../public/images/project/icons/facebook.png"
-            alt="Facebook"
-          />
-          {/* /Users/SYPHER/sypherGithub/React/YFY-React/templateRouter/yfy-vite-project/public/icons/facebook.png */}
+          <img src="/images/project/icons/icons8-facebook.svg" alt="Facebook" />
         </a>
       </div>
 

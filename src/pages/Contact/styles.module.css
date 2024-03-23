@@ -10,9 +10,9 @@ body {
     font-family: var(--main-font);
 }
 
-/* body {
+body {
     animation: fadeIn 1s ease;
-} */
+}
 
 /* Header Styles */
 .contact-header {
@@ -22,7 +22,7 @@ body {
     color: #ffffff;
     padding: 3vw;
     text-align: center;
-    /* animation: fadeIn 1s ease; */
+    animation: fadeIn 1s ease;
 }
 
 /* .contact-header h1 {
@@ -41,7 +41,7 @@ body {
     margin: 2em auto;
     max-width: 800px;
     padding: 2em;
-    /* animation: slideInFromTop 1s ease; */
+    animation: slideInFromTop 1s ease;
 }
 
 label {
@@ -114,11 +114,11 @@ label {
     justify-content: center;
     margin-top: 2em;
     padding: 1em 0;
-    /* animation: slideInFromBottom 1s ease; */
+    animation: slideInFromBottom 1s ease;
 }
 
 .social-media a {
-    /* animation: slideInFromLeft 1s ease; */
+    animation: slideInFromLeft 1s ease;
     margin: 0 2em;
 }
 
@@ -131,7 +131,7 @@ label {
 .join-community {
     margin: 2em 0;
     text-align: center;
-    /* animation: slideInFromBottom 1s ease; */
+    animation: slideInFromBottom 1s ease;
 }
 
 .join-community h2 {

@@ -9,7 +9,7 @@ function Quote() {
       <div className={styles["quote-container"]}>
         <div className={styles["quote-icon"]}>
           <img
-            src="../../images/project/icons/icons8-quote-left-50.png"
+            src="/images/project/icons/icons8-quote-left-50.png"
             alt="Quote icon by Icons8"
           />
         </div>
@@ -19,7 +19,7 @@ function Quote() {
         </p>
         <div className={styles["quote-icon"]}>
           <img
-            src="../../images/project/icons/icons8-quote-50.png"
+            src="/images/project/icons/icons8-quote-50.png"
             alt="Quote icon by Icons8"
           />
         </div>
