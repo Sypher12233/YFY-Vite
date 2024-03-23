@@ -23,15 +23,15 @@ function ContactUs() {
     inquiry: "",
   });
 
-  const onSubmit = (event) => {
-    event.preventDefault();
+  // const onSubmit = (event) => {
+  //   event.preventDefault();
 
-    if (!validateForm()) return;
-    console.log("Form submitted successfully!");
-    alert("Form submitted successfully!");
-    clearForm();
-    scrollToTop();
-  };
+  //   if (!validateForm()) return;
+  //   console.log("Form submitted successfully!");
+  //   alert("Form submitted successfully!");
+  //   clearForm();
+  //   scrollToTop();
+  // };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -110,6 +110,34 @@ function ContactUs() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Handle form submission
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!validateForm()) return;
+
+    try {
+      const result = await handleSubmit(event);
+
+      if (result && result.error) {
+        // Display server-side error message in an alert
+        alert(
+          "There was an error submitting the form. Please try again later."
+        );
+        console.error("Form submission error:", result.error);
+      } else {
+        console.log("Form submitted successfully!");
+        alert("Form submitted successfully!");
+        clearForm();
+        scrollToTop();
+      }
+    } catch (error) {
+      // Handle unexpected errors
+      console.error("Unexpected error occurred during form submission:", error);
+      alert("An unexpected error occurred. Please try again later.");
+    }
+  };
+
   return (
     <div>
       <div>
@@ -121,7 +149,7 @@ function ContactUs() {
         <div className={styles["contact-form"]}>
           <form
             id="contact-form"
-            onSubmit={handleSubmit}
+            onSubmit={handleFormSubmit}
             action={`https://formspree.io/f/xleqwvpd`}
           >
             <label htmlFor="fullName">Full Name</label>
@@ -422,28 +450,49 @@ function ContactUs() {
               required
             />
 
-            <div>
+            <div className={styles["file-submit"]}>
               <label htmlFor="cv">Add CV File (PDF Format)</label>
               <input
                 type="file"
                 name="cv"
                 id="cv"
                 accept="application/pdf"
-                value={formData.cv || ""}
                 onChange={handleInputChange}
+                disabled
               />
+              {formData.cv ? (
+                <p>{formData.cv.name}</p>
+              ) : (
+                <p>
+                  For now, please submit your CV file to this email address:
+                  <a href="mailto:youthforyouth1399@gmail.com">
+                    youthforyouth1399@gmail.com
+                  </a>
+                </p>
+              )}
             </div>
 
-            <div>
+            <div className={styles["file-submit"]}>
               <label htmlFor="idScan">Add ID Scan File (PDF Format)</label>
               <input
                 type="file"
                 name="idScan"
                 id="idScan"
                 accept="image/*,.pdf"
-                value={formData.idScan || ""}
                 onChange={handleInputChange}
+                disabled
               />
+              {formData.idScan ? (
+                <p>{formData.idScan.name}</p>
+              ) : (
+                <p>
+                  For now, please submit your ID scan file to this email
+                  address:
+                  <a href="mailto:youthforyouth1399@gmail.com">
+                    youthforyouth1399@gmail.com
+                  </a>
+                </p>
+              )}
             </div>
 
             <label htmlFor="motivation">Motivation letter for Membership</label>
@@ -469,7 +518,7 @@ function ContactUs() {
         </div>
       </div>
 
-      <div class={styles["social-media"]}>
+      <div className={styles["social-media"]}>
         <a href="#">
           <img
             src="/images/project/icons/icons8-instagram.svg"
@@ -487,9 +536,9 @@ function ContactUs() {
         </a>
       </div>
 
-      <div class={styles["join-community"]}>
-        <h2 class="charming-text">Join Our Community Today!</h2>
-        <p class="charming-text">
+      <div className={styles["join-community"]}>
+        <h2 className="charming-text">Join Our Community Today!</h2>
+        <p className="charming-text">
           <strong>Experience Our Best Offers With Membership Program.</strong>
         </p>
       </div>

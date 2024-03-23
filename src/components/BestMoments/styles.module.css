@@ -31,13 +31,14 @@
   border: 0.1vw solid #6F7787;
   background-color: #000;
   color: #fff;
+  margin: 0;
 }
 
 .search-bar button[type="submit"] {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 0.3vw;
+  padding: 0.22vw;
   background-color: transparent;
   border: none;
 }

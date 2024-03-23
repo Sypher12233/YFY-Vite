@@ -105,6 +105,18 @@ label {
     padding: 10px 20px;  */
 }
 
+.file-submit p{
+    margin: 0 0 2vw 0;
+}
+
+.file-submit a{
+    text-decoration: none;
+    margin-left: .4vw;
+    font-weight: 600;
+}
+.file-submit a:hover {
+    color: var(--primary-color);
+}
 /* Social Media Styles */
 .social-media {
     /* background: linear-gradient(135deg, #75d4e0, #35a9b6, #537991); */
