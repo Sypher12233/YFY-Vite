@@ -1,0 +1,84 @@
+.categories-section {
+    margin: 2vw 2.1vw 4vw 2.1vw;
+}
+
+.categories-section h2 {
+    font: var(--heading);
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 1.08vw 0;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    height: 26.81vw;
+}
+
+.box {
+    position: relative;
+    width: 21.8vw;
+}
+
+
+.box p {
+    font-size: 1.3vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .71vw;
+    font-weight: 500;
+}
+
+.box p:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.a,
+.b,
+.c,
+.d,
+.e,
+.f {
+    max-width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+.a {
+    background-image: url("../../../public/images/project/first-hands\ by\ hannah-busing.jpeg");
+}
+
+.b {
+    background-image: url("../../../public/images/project/second-bulb\ by\ diego-ph.jpeg");
+}
+
+.c {
+    background-image: url("../../../public/images/project/third-pexels-eberhard-grossgasteiger-844297.jpg");
+}
+
+.d {
+    background-image: url("../../../public/images/project/fourth.png");
+}
+
+.e {
+    background-image: url("../../../public/images/project/fifithpexels-pixabay-461049.jpg");
+}
+
+.f {
+    background-image: url("../../../public/images/project/sixth.png");
+}
+
+.small-box {
+    height: 48%;
+}
+
+.spaced {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

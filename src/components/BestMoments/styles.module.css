@@ -1,0 +1,122 @@
+.best-moments-section {
+  padding: 10.79vw 8.6vw;
+  height: 57.55vw;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.best-moments-section h2 {
+  font-weight: 700;
+  font-size: 3vw;
+  width: 70%;
+  text-align: center;
+  line-height: 4.69vw;
+}
+
+.search-bar {
+  position: relative;
+  width: 32vw;
+  margin: 3.59vw 0;
+  left: -3%;
+}
+
+.search-bar input[type="text"] {
+  width: 94%;
+  height: auto;
+  padding: .71vw 3.6vw;
+  border-radius: 0.4vw;
+  border: 0.1vw solid #6F7787;
+  background-color: #000;
+  color: #fff;
+}
+
+.search-bar button[type="submit"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.3vw;
+  background-color: transparent;
+  border: none;
+}
+
+button[type="submit"] img {
+  width: 2.1vw;
+  height: 2.1vw;
+}
+
+/* Best moments */
+
+.best-moments-section h3 {
+  font-weight: 500;
+  font-size: 2.2vw;
+  text-align: center;
+  margin: 4.31vw 0;
+}
+
+.best-moments-boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1.43vw;
+  gap: 1.43vw;
+}
+
+.best-moments-box {
+  height: 28vw;
+  width: 25vw;
+  background-color: #212123;
+  cursor: pointer;
+}
+
+.best-moments-box img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.inside-best-moments-box {
+  height: 50%;
+  padding: 1.07vw 0 0 1.5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.inside-best-moments-box h4 {
+  font-weight: 600;
+  font-size: 1.2vw;
+  margin-bottom: 1.79vw;
+}
+
+.inside-best-moments-box h4:hover {
+  color: var(--primary-color);
+}
+
+.speakers-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.43vw;
+}
+
+.speakers-name img {
+  width: 1.3vw;
+  height: 1.3vw;
+  padding: 0 0.44vw 0 0;
+}
+
+.name-speaker {
+  font-weight: 500;
+  font-size: 1vw;
+}
+
+.date-speaker {
+  font-weight: 300;
+  font-size: .87vw;
+}
+
+.location-speaker {
+  font-weight: 200;
+  font-size: .87vw;
+}
