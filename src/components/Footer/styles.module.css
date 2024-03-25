@@ -14,9 +14,10 @@ body {
     color: var(--primary-color);
 }
 
+/* 
 li {
     list-style: none;
-}
+} */
 
 strong {
     font-weight: 600;
@@ -39,8 +40,7 @@ footer {
 
 .about-yfy,
 .latest-tweets,
-.instagram-section,
-.footer-nav {
+.instagram-section {
     flex: 1;
     margin-right: 1.43vw;
 }
@@ -183,26 +183,14 @@ footer {
     margin: 7.19vw 0 0 0;
 }
 
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav ul li {
-    display: inline-block;
-    margin-right: 2.51vw;
-}
-
-.footer-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1vw;
-}
-
-.footer-nav .color {
+.footer-nav li a.nav-link-active {
     color: var(--primary-color);
 }
+
+.footer-nav li a {
+    color: #fff;
+}
+
 
 /* Brand Text */
 

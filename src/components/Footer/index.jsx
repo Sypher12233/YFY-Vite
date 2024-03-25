@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import Header from "../../components/Header";
 function Footer() {
   return (
     <footer>
@@ -99,7 +100,8 @@ function Footer() {
       <div className={styles["footer-nav"]}>
         {/* <!-- Navigation Links --> */}
         <div>
-          <ul>
+          <Header showLogo={false} />
+          {/* <ul>
             <li>
               <a className={styles.color} href="#">
                 Home
@@ -117,7 +119,7 @@ function Footer() {
             <li>
               <a href="#">Support Us</a>
             </li>
-          </ul>
+          </ul> */}
         </div>
 
         {/* <!-- Brand Text --> */}

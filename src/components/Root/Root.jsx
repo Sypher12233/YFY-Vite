@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 function Root() {
   return (
     <>
-      <Header />
+      <Header showLogo={true} />
       <Outlet />
     </>
   );

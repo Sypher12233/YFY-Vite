@@ -1,0 +1,218 @@
+:root {
+    --primary-color: #007AFF;
+    --caption-color: #9095A1;
+    --main-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --heading: 500 2.6vw var(--main-font);
+    --sub-heading: 300 2.15vw var(--main-font);
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+body {
+    animation: fadeIn 1s ease;
+}
+
+/* Header Styles */
+.contact-header {
+    font-size: 2.5vw;
+    background-color: #007AFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    padding: 3vw;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+/* .contact-header h1 {
+    font-size: 1.5vw;
+} */
+.contact-header h2 {
+    font-size: 1.5vw;
+    margin: 1.5vw 0;
+}
+
+/* Contact Form Styles */
+.membership-form {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 2em;
+    animation: slideInFromTop 1s ease;
+}
+
+label {
+    color: var(--primary-color);
+}
+
+input,
+select,
+label {
+    margin: 1vw 0 0 0;
+}
+
+.membership-form input,
+.membership-form textarea,
+.membership-form button,
+.file-input span,
+.membership-form select {
+    /* border: 1px solid #75d4e0; */
+    border: 1px solid #75e0a5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 1em 0;
+    padding: 1em;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 22px);
+}
+
+.membership-form input:focus,
+.membership-form textarea:focus,
+.membership-form select:focus {
+    background: #ffffff;
+    border-color: var(--primary-color);
+    outline: none;
+}
+.membership-form input:hover,
+.membership-form textarea:hover,
+.membership-form select:hover {
+    border-color: var(--caption-color);
+}
+
+.membership-form button {
+    /* background: linear-gradient(135deg, #75d4e0, #35a9b6, #537991); */
+    background-color: #007AFF;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.membership-form button:hover {
+    background: #002f6c;
+}
+
+.file-input label {
+    background-color: #007AFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-submit p {
+    margin: 0 0 2vw 0;
+    font-weight: 300;
+}
+
+.file-submit a {
+    text-decoration: none;
+    margin-left: .4vw;
+    font-weight: 600;
+    color: green;
+}
+
+.file-submit a:hover {
+    color: var(--primary-color);
+}
+
+/* Social Media Styles */
+.social-media {
+    background-color: #007AFF;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 1em 0;
+    animation: slideInFromBottom 1s ease;
+}
+
+.social-media a {
+    animation: slideInFromLeft 1s ease;
+    margin: 0 2em;
+}
+
+.social-media a img {
+    height: 40px;
+    width: 40px;
+}
+
+/* Join Our Community Today Section */
+.join-community {
+    margin: 2em 0;
+    text-align: center;
+    animation: slideInFromBottom 1s ease;
+}
+
+.join-community h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.join-community p {
+    font-weight: bold;
+}
+
+/* Charming Font */
+.charming-text {
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .file-submit p {
+        margin: 0 0 5vw 0;
+        line-height: 5vw;
+    }
+
+    .membership-form input,
+    .membership-form textarea,
+    .membership-form button,
+    .file-input span,
+    .membership-form select {
+        font-size: 3vw;
+    }
+}

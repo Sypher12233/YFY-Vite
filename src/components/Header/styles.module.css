@@ -1,6 +1,7 @@
 /* 0.6015254686, 13.9. 8.336 */
 :root {
     --primary-color: #007AFF;
+    --secondary-color: #75e0a5;
     --caption-color: #9095A1;
     --main-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --heading: 500 2.6vw var(--main-font);
@@ -11,20 +12,12 @@ body {
     font-family: var(--main-font);
 }
 
-.color {
-    color: var(--primary-color);
-}
-
-li {
-    list-style: none;
-}
-
 strong {
     font-weight: 600;
     font-size: 1.15vw;
 }
 
-header {
+header nav .head {
     width: 100%;
     height: 7.19vw;
 }
@@ -35,14 +28,16 @@ header {
 
 .desktop {
     display: flex;
+}
+
+.nav-links {
     justify-content: space-between;
+    margin: 0 2.15vw 0 0;
 }
 
 nav {
     display: flex;
     align-items: center;
-    margin: 0 2.15vw;
-    /* position: absolute; */
     justify-content: space-between;
     top: 0%;
 }
@@ -51,29 +46,62 @@ nav img {
     max-width: 100%;
     height: auto;
     cursor: pointer;
+    margin: 0 0 0 2.15vw;
 }
 
-nav li {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 1.4vw;
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-nav li a {
+.nav-links li {
+    margin-left: 2vw;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links li:first-child {
+    margin-left: 0;
+}
+
+.nav-link {
+    color: black;
     text-decoration: none;
-    color: #000;
 }
+
+.nav-link-active {
+    color: var(--primary-color);
+}
+
+/* 
+.nav-links li {
+    margin-left: 2vw;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+
+}
+
+
+.nav-link-active {
+    color: var(--primary-color);
+    background-color: aqua;
+} */
 
 @media only screen and (max-width: 768px) {
     header {
-        display: flex;
-        justify-content: space-around;
         height: 7.14vw;
-
     }
 
     .mobile {
-        width: 100%;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .mobile .nav-img {
@@ -87,7 +115,7 @@ nav li a {
 
     .mobile .nav-links {
         font-size: 1.5vw;
-        display: inline-flex;
+        /* display: inline-flex; */
         align-items: center;
     }
 
