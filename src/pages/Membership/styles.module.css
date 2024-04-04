@@ -41,7 +41,7 @@ body {
     margin: 2em auto;
     max-width: 800px;
     padding: 2em;
-    animation: slideInFromTop 1s ease;
+    /* animation: slideInFromTop 1s ease; */
 }
 
 label {
@@ -172,7 +172,7 @@ label {
     }
 }
 
-@keyframes slideInFromTop {
+/* @keyframes slideInFromTop {
     from {
         transform: translateY(-100%);
     }
@@ -180,7 +180,7 @@ label {
     to {
         transform: translateY(0);
     }
-}
+} */
 
 @keyframes slideInFromLeft {
     from {
@@ -213,6 +213,6 @@ label {
     .membership-form button,
     .file-input span,
     .membership-form select {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }

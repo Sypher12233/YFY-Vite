@@ -51,6 +51,18 @@ function Header({ showLogo }) {
           </li>
           <li>
             <NavLink
+              to="/resources"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles["nav-link"]} ${styles["nav-link-active"]}`
+                  : `${styles["nav-link"]}`
+              }
+            >
+              Resources
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive

@@ -6,6 +6,7 @@ import Home from "./pages/Home/index";
 import "./App.css";
 import Membership from "./pages/Membership";
 import ContactUs from "./pages/Contact";
+import Resources from "./pages/Resources";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="join-us" element={<Membership />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route path="resources/*" element={<Resources />} />
         </Route>
       </Routes>
     </Router>
