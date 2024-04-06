@@ -7,6 +7,7 @@ import "./App.css";
 import Membership from "./pages/Membership";
 import ContactUs from "./pages/Contact";
 import Resources from "./pages/Resources";
+import Events from "./pages/Events";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="join-us" element={<Membership />} />
           <Route path="contact" element={<ContactUs />} />
-          <Route path="resources/*" element={<Resources />} />
+          <Route path="resources" element={<Resources />} />
+          <Route path="events/*" element={<Events />} />
         </Route>
       </Routes>
     </Router>

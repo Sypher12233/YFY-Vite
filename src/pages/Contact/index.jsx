@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { validateEmailAddress, handleInputChange } from "../Membership";
 import styles from "./styles.module.css";
-import Footer from "../../components/Footer";
 
 function ContactUs() {
   const [state, handleSubmit] = useForm("xbjnzrka");
@@ -117,7 +116,6 @@ function ContactUs() {
           />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

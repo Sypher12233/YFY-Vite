@@ -18,6 +18,10 @@ strong {
     font-size: 1.15vw;
 }
 
+header {
+    animation: fadeInDown 2s ease;
+}
+
 header nav .head {
     width: 100%;
     height: 7.19vw;
@@ -45,9 +49,10 @@ nav {
 
 nav img {
     max-width: 100%;
-    height: auto;
+    height: 7.19vw;
     cursor: pointer;
     margin: 0 0 0 2.15vw;
+    object-fit: cover;
 }
 
 .nav-links {
@@ -57,12 +62,13 @@ nav img {
 }
 
 .nav-links li {
+    position: relative;
     margin-left: 2vw;
 }
 
-.nav-link:hover {
+/* .nav-link:hover {
     color: var(--secondary-color);
-}
+} */
 
 .nav-links li:first-child {
     margin-left: 0;
@@ -75,6 +81,34 @@ nav img {
 
 .nav-link-active {
     color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    /* background-color: #537991; */
+    background-color: var(--secondary-color);
+    transition: width 0.5s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media only screen and (max-width: 768px) {

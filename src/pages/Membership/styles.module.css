@@ -8,11 +8,9 @@
 
 body {
     font-family: var(--main-font);
-}
-
-body {
     animation: fadeIn 1s ease;
 }
+
 
 /* Header Styles */
 .contact-header {
@@ -76,6 +74,7 @@ label {
     border-color: var(--primary-color);
     outline: none;
 }
+
 .membership-form input:hover,
 .membership-form textarea:hover,
 .membership-form select:hover {

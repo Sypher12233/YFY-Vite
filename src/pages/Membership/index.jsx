@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import styles from "./styles.module.css";
-import Footer from "../../components/Footer";
 
 export const handleInputChange = (e) => {
   const { name, value } = e.target;
@@ -509,19 +508,19 @@ function Membership() {
       </div>
 
       <div className={styles["social-media"]}>
-        <a href="#">
+        <a href="https://www.instagram.com/youthforyouth.af/">
           <img
             src="/images/project/icons/icons8-instagram.svg"
             alt="Instagram"
           />
         </a>
-        <a href="#">
+        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinkedin.com%2Fin%2FYOUTH%2520for%2520YOUTH%2520%25D8%25AC%25D9%2588%25D8%25A7%25D9%2586%2520%25D8%25A8%25D8%25B1%25D8%25A7%25DB%258C%2520%25D8%25AC%25D9%2588%25D8%25A7%25D9%2586&h=AT2k5So7RGcDA8Mr9FOb9uwZXZdkxR76t4u4D4ttKbhx6XDHQgc8grLd4ucP3iCzCpzpdSvd_7XfGfzBTFgGbEa9nQyL3QQnPVo9SZ1CiF5zLwZ-4RmaTET7f3xdvYeoDP9h1JKCI1nmWnOMQtT8lFhZ8A">
           <img
             src="/images/project/icons/icons8-linkedin (1).svg"
             alt="LinkedIn"
           />
         </a>
-        <a href="#">
+        <a href="https://www.facebook.com/people/YOUTH-for-YOUTH-%D8%AC%D9%88%D8%A7%D9%86-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%AC%D9%88%D8%A7%D9%86/100077650367064/">
           <img src="/images/project/icons/icons8-facebook.svg" alt="Facebook" />
         </a>
       </div>
@@ -532,7 +531,6 @@ function Membership() {
           <strong>Experience Our Best Offers With Membership Program.</strong>
         </p>
       </div>
-      <Footer />
     </>
   );
 }

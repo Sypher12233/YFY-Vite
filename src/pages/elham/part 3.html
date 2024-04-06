@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for the event panel */
+        .event-panel {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease; /* Animation on hover */
+            margin-bottom: 20px;
+        }
+
+        .event-panel:hover {
+            transform: scale(1.05); /* Slightly scale up on hover */
+        }
+
+        /* Customize fonts, colors, and other styles as needed */
+        .panel-content {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Two-column layout */
+        .column {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column .event-panel {
+            flex-basis: calc(50% - 20px); /* Adjust width for two columns */
+        }
+    </style>
+    <title>Event Website</title>
+</head>
+<body>
+    <!-- First Section (Alone at the Top) -->
+    <section class="event-panel" id="in-depth">
+        <div class="panel-content">
+            <h1>In-depth Analysis & News</h1>
+            <p>Explore our blog for insightful articles and stay updated with the latest news.</p>
+        </div>
+    </section>
+
+    <!-- Two-Column Layout -->
+    <div class="column">
+        <!-- Second Section -->
+        <section class="event-panel" id="events">
+            <div class="panel-content">
+                <img src="event1.jpg" alt="Most Famous Events">
+                <h2>Most Famous Events</h2>
+                <p>Stay updated and informed with our insightful newsletters, delivering the latest news, tips, and updates directly to your inbox.</p>
+                <button>Click Here...</button>
+            </div>
+        </section>
+
+        <!-- Third Section -->
+        <section class="event-panel" id="speakers">
+            <div class="panel-content">
+                <img src="event2.jpg" alt="This Week Speakers">
+                <h2>This Week Speakers</h2>
+                <p>Discover our lineup of speakers for this week's events.</p>
+                <button>Click Here...</button>
+            </div>
+        </section>
+
+        <!-- Fourth Section -->
+        <section class="event-panel" id="book-clubs">
+            <div class="panel-content">
+                <img src="event3.jpg" alt="Book Clubs Meetings">
+                <h2>Book Clubs Meetings</h2>
+                <p>Join our vibrant book club community where literature comes alive, discussions flourish, and connections...</p>
+                <button>Click Here...</button>
+            </div>
+        </section>
+    </div>
+
+    

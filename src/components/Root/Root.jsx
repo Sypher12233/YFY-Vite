@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/index";
+import Footer from "../Footer";
 import { Outlet } from "react-router-dom";
 
 function Root() {
@@ -7,6 +8,7 @@ function Root() {
     <>
       <Header showLogo={true} />
       <Outlet />
+      <Footer />
     </>
   );
 }
