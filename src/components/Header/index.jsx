@@ -27,7 +27,7 @@ function Header({ showLogo }) {
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="/about-us"
               className={({ isActive }) =>
                 isActive
                   ? `${styles["nav-link"]} ${styles["nav-link-active"]}`
@@ -63,7 +63,7 @@ function Header({ showLogo }) {
           </li>
           <li>
             <NavLink
-              to="/contact"
+              to="/contact-us"
               className={({ isActive }) =>
                 isActive
                   ? `${styles["nav-link"]} ${styles["nav-link-active"]}`
@@ -75,7 +75,7 @@ function Header({ showLogo }) {
           </li>
           <li>
             <NavLink
-              to="/support"
+              to="/support-us"
               className={({ isActive }) =>
                 isActive
                   ? `${styles["nav-link"]} ${styles["nav-link-active"]}`

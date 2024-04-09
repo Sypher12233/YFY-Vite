@@ -1,0 +1,152 @@
+body {
+    animation: fadeIn 1s ease;
+}
+
+.mainDiv {
+    background: linear-gradient(135deg, #75d4e0, #35a9b6, #537991);
+    padding: 1.5vw;
+}
+
+.page-heading {
+    text-align: center;
+    font-size: 22px;
+    color: #ffffff;
+    padding: 1.5vw;
+    animation: fadeInUp 1s ease;
+    font-weight: 600;
+}
+
+.page-subheading {
+    text-align: center;
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.scholarship-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.scholarship-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease;
+    text-align: center;
+}
+
+.scholarship-card .apply-button {
+    background-color: #35a9b6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.scholarship-card .apply-button:hover {
+    background-color: #35a9b6;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-5px);
+}
+
+.scholarship-card h2 {
+    color: #35a9b6;
+    font-family: 'Charming', cursive;
+    text-align: center;
+    font-size: 24px;
+    margin: 16px 0 10px 0;
+}
+
+.scholarship-card p {
+    margin: 16px 0 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1e5b89;
+}
+
+.scholarship-card p:first-child {
+    font-weight: bold;
+    color: #35a9b6;
+    font-size: 20px;
+}
+
+.scholarship-card p:last-child {
+    font-style: italic;
+    color: #537991;
+}
+
+.animated {
+    transition: transform 0.3s ease;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* New animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
