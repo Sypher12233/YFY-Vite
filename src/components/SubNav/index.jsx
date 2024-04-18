@@ -1,3 +1,7 @@
+// Thought:
+// I want to have a search bar that allows a user to browse through events
+// possible upgrades could be adding a filter functionality
+
 import React from "react";
 import styles from "./styles.module.css";
 
@@ -18,12 +22,12 @@ function SubNav() {
         </li>
         <li>Select Date</li>
       </div>
-      <div className={styles.column}>
+      {/* <div className={styles.column}>
         <li>
           <strong>Time</strong>
         </li>
         <li>Select Time</li>
-      </div>
+      </div> */}
       <div className={styles.column}>
         <li>
           <strong>Speakers</strong>

@@ -39,12 +39,12 @@ strong {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    height: 26.76vw;
+    /* height: 26.76vw; */
     margin-top: 3.6vw;
 }
 
 .news-box {
-    height: 25.17vw;
+    /* height: 25.17vw; */
     width: 25vw;
     overflow: hidden;
     position: relative;

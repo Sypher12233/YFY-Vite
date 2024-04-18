@@ -8,7 +8,7 @@ import ContactUs from "./pages/Contact";
 import Resources from "./pages/Resources";
 import Scholarships from "./pages/Scholarships";
 import Events from "./pages/Events";
-// import AboutUs from "./pages/AboutUs";
+import AboutUs from "./pages/AboutUs";
 // import SupportUs from "./pages/SupportUs";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Root />}>
           <Route index element={<Home />} />
-          {/* <Route path="about-us" element={<AboutUs />} /> */}
+          <Route path="about-us" element={<AboutUs />} />
           <Route path="join-us" element={<Membership />} />
           <Route path="resources" element={<Resources />} />
           <Route path="resources/scholarships" element={<Scholarships />} />

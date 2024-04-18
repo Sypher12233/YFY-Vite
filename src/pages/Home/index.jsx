@@ -13,7 +13,7 @@ function Home() {
   return (
     <main>
       <Background />
-      <SubNav />
+      {/* <SubNav /> */}
       <Quote />
       <Categories />
       <Clubs />

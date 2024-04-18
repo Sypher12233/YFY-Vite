@@ -3,22 +3,9 @@ import styles from "./styles.module.css";
 function BestMoments() {
   return (
     <div className={styles["best-moments-section"]}>
-      <h2>Discover Unforgettable Experience at Spectacular Events</h2>
-
       {/* <!-- Best moments content --> */}
 
-      {/* <!-- Search input for events --> */}
-      <div className={styles["search-bar"]}>
-        <input type="text" placeholder="Search..." />
-        <button type="submit">
-          <img
-            src="/images/project/icons/icons8-search-64 (2).png"
-            alt="Search"
-          />
-        </button>
-      </div>
-
-      <h3>Our Top moments this year</h3>
+      <h2>Our Top moments this year</h2>
 
       <div className={styles["best-moments-boxes"]}>
         {/* <!-- Youth Development Box --> */}
@@ -55,6 +42,21 @@ function BestMoments() {
               <p className={styles["location-speaker"]}>Online - Google Meet</p>
             </div>
           </div>
+          <div className={styles.infoSpeaker}>
+            <p>
+              Either a comment about YFY, or what a influenced person said about
+              YFY, a experience of our member or anything else like this will be
+              here. The quick brown fox jumps over the lazy dog. The quick brown
+              fox jumps over the lazy dog. Either a comment about YFY, or what a
+              influenced person said about YFY, a experience of our member or
+              anything else like this will be here. The quick brown fox jumps
+              over the lazy dog.The quick brown fox jumps over the lazy dog.
+            </p>
+
+            <button type="button" className={styles["feedback-btn"]}>
+              Learn More
+            </button>
+          </div>
         </div>
 
         {/* Networking Box */}
@@ -88,12 +90,28 @@ function BestMoments() {
               <p className={styles["location-speaker"]}>Online - Google Meet</p>
             </div>
           </div>
+          <div className={styles.infoSpeaker}>
+            <p>
+              Either a comment about YFY, or what a influenced person said about
+              YFY, a experience of our member or anything else like this will be
+              here. The quick brown fox jumps over the lazy dog. The quick brown
+              fox jumps over the lazy dog. Either a comment about YFY, or what a
+              influenced person said about YFY, a experience of our member or
+              anything else like this will be here. The quick brown fox jumps
+              over the lazy dog.The quick brown fox jumps over the lazy dog.
+            </p>
+
+            <button type="button" className={styles["feedback-btn"]}>
+              Learn More
+            </button>
+          </div>
         </div>
 
         {/* Entrepreneurship Box */}
         <div className={styles["best-moments-box"]}>
           <img
-            src="/images/project/startup-pexels-eva-bronzini-6956385.jpg"
+            // src="/images/project/startup-pexels-eva-bronzini-6956385.jpg"
+            src="/images/project/startup1-pexels-canva-studio-3194521.jpg"
             alt="a microphone"
           />
 
@@ -124,7 +142,34 @@ function BestMoments() {
               <p className={styles["location-speaker"]}>Online - Google Meet</p>
             </div>
           </div>
+          <div className={styles.infoSpeaker}>
+            <p>
+              Either a comment about YFY, or what a influenced person said about
+              YFY, a experience of our member or anything else like this will be
+              here. The quick brown fox jumps over the lazy dog. The quick brown
+              fox jumps over the lazy dog. Either a comment about YFY, or what a
+              influenced person said about YFY, a experience of our member or
+              anything else like this will be here. The quick brown fox jumps
+              over the lazy dog.The quick brown fox jumps over the lazy dog.
+            </p>
+
+            <button type="button" className={styles["feedback-btn"]}>
+              Learn More
+            </button>
+          </div>
         </div>
+      </div>
+
+      {/* <!-- Search input for events --> */}
+      <h3>Discover Unforgettable Experiences at Spectacular Events</h3>
+      <div className={styles["search-bar"]}>
+        <input type="text" placeholder="Search..." />
+        <button type="submit">
+          <img
+            src="/images/project/icons/icons8-search-64 (2).png"
+            alt="Search"
+          />
+        </button>
       </div>
     </div>
   );

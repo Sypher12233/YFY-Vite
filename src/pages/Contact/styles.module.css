@@ -9,9 +9,6 @@
 
 body {
     font-family: var(--main-font);
-}
-
-body {
     animation: fadeIn 1s ease;
 }
 
@@ -19,7 +16,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 3vw 10vw;
+    padding: 5vw 10vw;
+    padding-top: 12vw;
     animation: fadeIn 1s ease;
 }
 

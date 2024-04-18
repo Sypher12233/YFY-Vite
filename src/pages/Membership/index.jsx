@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import styles from "./styles.module.css";
 
-export const handleInputChange = (e) => {
+export const handleInputChange = (e, setFormData, formData) => {
   const { name, value } = e.target;
   setFormData({ ...formData, [name]: value });
 };
 
-export const handleSelectChange = (fieldName, otherFieldId) => (e) => {
-  const selectedValue = e.target.value;
-  setFormData({ ...formData, [fieldName]: selectedValue });
-};
-
-export const validateForm = () => {
+export const validateForm = (formData) => {
   const requiredFields = [
     "fullName",
     "gender",
@@ -54,7 +49,7 @@ export const validateEmailAddress = (emailAddress) => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddress);
 };
 
-export const clearForm = () => {
+export const clearForm = (setFormData) => {
   setFormData({
     fullName: "",
     gender: "",
@@ -80,10 +75,10 @@ export const scrollToTop = () => {
 };
 
 // Handle form submission
-const handleFormSubmit = async (event) => {
+const handleFormSubmit = async (event, formData, handleSubmit, setFormData) => {
   event.preventDefault();
 
-  if (!validateForm()) return;
+  if (!validateForm(formData)) return;
 
   try {
     const result = await handleSubmit(event);
@@ -95,7 +90,7 @@ const handleFormSubmit = async (event) => {
     } else {
       console.log("Form submitted successfully!");
       alert("Form submitted successfully!");
-      clearForm();
+      clearForm(setFormData);
       scrollToTop();
     }
   } catch (error) {
@@ -128,7 +123,7 @@ function Membership() {
 
   return (
     <>
-      <div>
+      <div className={styles.membershipMain}>
         <div className={styles["contact-header"]}>
           <h1>Join Our Community Today!</h1>
           <h2>Apply to become a YFY Member!</h2>
@@ -137,7 +132,9 @@ function Membership() {
         <div className={styles["membership-form"]}>
           <form
             id="membership-form"
-            onSubmit={handleFormSubmit}
+            onSubmit={(e) =>
+              handleFormSubmit(e, formData, handleSubmit, setFormData)
+            }
             action={`https://formspree.io/f/xleqwvpd`}
             method="post"
           >
@@ -148,7 +145,7 @@ function Membership() {
               name="fullName"
               placeholder="Full Name"
               value={formData.fullName}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             />
 
@@ -157,7 +154,7 @@ function Membership() {
               id="gender"
               name="gender"
               value={formData.gender}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             >
               <option value="" disabled defaultValue>
@@ -173,10 +170,7 @@ function Membership() {
               id="nationality"
               name="nationality"
               value={formData.nationality}
-              onChange={handleSelectChange(
-                "nationality",
-                "otherNationalityInput"
-              )}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             >
               <option value="" disabled defaultValue>
@@ -216,7 +210,7 @@ function Membership() {
                   name="otherNationality"
                   placeholder="Your Nationality"
                   value={formData.otherNationality}
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e, setFormData, formData)}
                 />
               </div>
             )}
@@ -228,7 +222,7 @@ function Membership() {
               name="mainAddress"
               placeholder="Main Address"
               value={formData.mainAddress}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             />
 
@@ -237,7 +231,7 @@ function Membership() {
               id="job"
               name="job"
               value={formData.job}
-              onChange={handleSelectChange("job", "otherJob")}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
             >
               <option value="" disabled>
                 Select your job
@@ -368,7 +362,7 @@ function Membership() {
                   name="otherJob"
                   placeholder="Your Job"
                   value={formData.otherJob}
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e, setFormData, formData)}
                 />
               </div>
             )}
@@ -380,7 +374,7 @@ function Membership() {
               name="birthDate"
               placeholder="Date of Birth"
               value={formData.birthDate}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             />
 
@@ -389,7 +383,7 @@ function Membership() {
               id="education"
               name="education"
               value={formData.education}
-              onChange={handleSelectChange("education", "otherEducation")}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             >
               <option value="" disabled>
@@ -411,7 +405,7 @@ function Membership() {
                   name="otherEducation"
                   placeholder="Education Degree"
                   value={formData.otherEducation}
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e, setFormData, formData)}
                 />
               </div>
             )}
@@ -425,7 +419,7 @@ function Membership() {
               name="contactNumber"
               placeholder="Contact Number"
               value={formData.contactNumber}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
             />
 
             <label htmlFor="emailAddress">Email</label>
@@ -435,7 +429,7 @@ function Membership() {
               name="emailAddress"
               placeholder="Email"
               value={formData.emailAddress}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             />
 
@@ -446,7 +440,7 @@ function Membership() {
                 name="cv"
                 id="cv"
                 accept="application/pdf"
-                onChange={handleInputChange}
+                onChange={(e) => handleInputChange(e, setFormData, formData)}
                 disabled
               />
               {formData.cv ? (
@@ -468,7 +462,7 @@ function Membership() {
                 name="idScan"
                 id="idScan"
                 accept="image/*,.pdf"
-                onChange={handleInputChange}
+                onChange={(e) => handleInputChange(e, setFormData, formData)}
                 disabled
               />
               {formData.idScan ? (
@@ -490,7 +484,7 @@ function Membership() {
               name="motivation"
               placeholder="Motivation letter for Membership (at least 1500-2500 characters)"
               value={formData.motivation}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
               required
             ></textarea>
 
@@ -500,7 +494,7 @@ function Membership() {
               name="inquiry"
               placeholder="Any Question/Suggestion/Criticism?"
               value={formData.inquiry}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, setFormData, formData)}
             ></textarea>
             <button type="submit">Submit</button>
           </form>

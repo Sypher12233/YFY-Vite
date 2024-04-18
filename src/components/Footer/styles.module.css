@@ -29,6 +29,7 @@ footer {
     /* margin-top: 7.19vw; */
     background-color: #000;
     padding: 6.11vw 7.19vw;
+    border-radius: 5% 5% 0 0;
 }
 
 .footer-section {
@@ -177,10 +178,16 @@ footer {
 /* Navigation and Brand Text */
 
 .footer-nav {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     margin: 7.19vw 0 0 0;
+    /* bottom: 10%; */
+}
+
+.footer-nav:first-child {
+    width: 50%;
 }
 
 .footer-nav li a.nav-link-active {

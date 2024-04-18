@@ -12,13 +12,14 @@
 }
 
 .background-image {
+    padding-top: 8vw;
     background-image: url("/images/landingPage.jpg");
     max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #f0f0f0;
-    height: 32.4vw;
+    height: 35vw;
     display: flex;
     align-items: center;
     justify-content: center;

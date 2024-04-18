@@ -5,7 +5,11 @@ import styles from "./styles.module.css";
 function Header({ showLogo }) {
   return (
     <header>
-      <nav className={`${styles.head} ${styles.mobile} ${styles.desktop}`}>
+      <nav
+        className={`${styles.mobile} ${
+          showLogo ? styles.withLogo : styles.withoutLogo
+        }`}
+      >
         {showLogo && (
           <div className={`${styles["nav-img"]}`}>
             <img src="/images/project/logo/logo.png" alt="logoImg" />

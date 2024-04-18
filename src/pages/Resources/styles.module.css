@@ -9,6 +9,8 @@ body {
     background-position: center;
     text-align: center;
     padding: 8vw 0;
+    padding-top: 15vw;
+    border-radius: 0 0 5% 5%;
 }
 
 .resourcesHeader h1 {
@@ -18,7 +20,10 @@ body {
 }
 
 .resourcesMain {
-    background: linear-gradient(135deg, #75d4e0, #35a9b6, #537991);
+    /* background: linear-gradient(135deg, #75d4e0, #35a9b6, #537991); */
+    background-image: url("/images/project/distress_grain_grunge_texture.jpg");
+    /* background-position: center; */
+    background-size: cover;
 }
 
 .container {
