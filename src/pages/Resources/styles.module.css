@@ -70,7 +70,7 @@ body {
 
 .section p {
     margin: .72vw 0;
-    color: #1e5b89;
+    /* color: #1e5b89; */
     animation: textFadeIn 1s ease;
 }
 
