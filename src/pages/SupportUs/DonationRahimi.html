@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Afghan Youth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #75d4e0, #35a9b6, #537991);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            animation: slideDown 2s ease-in-out;
+        }
+
+        .topnav {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            align-items: center; /* Center items vertically */
+            color: #537991;
+        }
+
+        .topnav a {
+            padding: 5px 20px;
+            margin: 0 100px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+            position: relative;
+        }
+
+        .topnav a:first-child {
+            margin-right: auto; /* Pushes the logo to the left */
+        }
+
+        .topnav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0; /* Start with no width */
+            height: 2px;
+            background-color: transparent;
+            transition: width 0.3s ease; /* Transition width for animation */
+        }
+
+        .topnav a:hover::after {
+            width: 100%; /* Expand width on hover */
+            background-color:#537991;
+        }
+
+        /* Add image to navigation bar */
+        .topnav img {
+            height: 70px;
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        /* Hero section styles */
+        .hero {
+            text-align: center;
+            padding-top: 80px;
+            padding-bottom: 50px;
+            animation: fadeIn 2s ease-in-out;
+            font-family: 'Charm', cursive; /* Apply Charming font */
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #35a9b6;
+            border-radius: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            animation: slideRight 2s ease-in-out;
+            text-align: justify;
+        }
+
+        main {
+            padding-top: 70px; /* Adjust this value as needed */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #ffffff;
+            color: #537991;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: slideUp 2s ease-in-out;
+            margin-top: 50px; /* Add margin between form and footer */
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .social-icon {
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #75d4e0;
+        }
+
+        /* Form styles */
+        .donation-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            animation: fadeIn 3s ease-in-out;
+            margin-bottom: 50px; /* Add margin between form and footer */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            color:   #35a9b6;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #35a9b6; /* Change border color to #35a9b6 */
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+            color: #537991; /* Font color */
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #537991;
+        }
+
+        input[type="submit"] {
+            background-color: #35a9b6;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #537991;
+        }
+
+        /* Payment fields */
+        .payment-details {
+            display: none; /* Initially hide payment fields */
+        }
+
+        /* Donate Amount field */
+        #donateAmount {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #35a9b6;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+            color: #537991;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        #donateAmount:focus {
+            outline: none;
+            border-color: #537991;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            /* Add your responsive styles here */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="topnav" aria-label="Main navigation">
+           <img src="C:\Users\DELL\Pictures\Saved Pictures\WhatsApp Image 2024-03-11 at 22.13.40_81ee82de.jpg" alt="Logo">
+            <a href="#about">About Us</a>
+            <a href="#scholarships">Scholarships</a>
+            <a href="#memberships">Memberships</a>
+            <a href="#events">Events</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Empower Afghan Youth!</h1>
+                <p>Stand with Afghan youth living through crisis in Afghanistan by supporting Leaders’ efforts to provide emergency support services to young leaders across Afghanistan. Leaders is a range of impactful programs that develop leadership skills among those who will be rebuilding their country in years to come. Your donation plays an essential role in supporting these efforts by providing immediate assistance such as emergency food aid while creating opportunities for long-term learning and leadership development within communities.</p>
+            </div>
+        </section>
+
+        <section class="donation-form">
+            <h2>Support Afghan Youth Future</h2>
+            <form id="donationForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address Line 1</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state">
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentType">Payment Type</label>
+                    <select id="paymentType" name="paymentType" required>
+                        <option value="">Select a payment method</option>
+                        <option value="eCheck">eCheck</option>
+                        <option value="creditCard">Credit Card</option>
+                    </select>
+                </div>
+
+                <div id="eCheckFields" class="payment-details">
+                    <div class="form-group">
+                        <label for="nameOnAccount">Name on Account</label>
+                        <input type="text" id="nameOnAccount" name="nameOnAccount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bankRoutingNumber">Bank Routing Number</label>
+                        <input type="text" id="bankRoutingNumber" name="bankRoutingNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bankAccountNumber">Bank Account Number</label>
+                        <input type="text" id="bankAccountNumber" name="bankAccountNumber" required>
+                    </div>
+                </div>
+
+                <div id="creditCardFields" class="payment-details">
+                    <div class="form-group">
+                        <label for="nameOnCard">Name on Card</label>
+                        <input type="text" id="nameOnCard" name="nameOnCard" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="creditCardNumber">Credit Card Number</label>
+                        <input type="text" id="creditCardNumber" name="creditCardNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expirationDate">Expiration Date</label>
+                        <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="securityCode">Security Code</label>
+                        <input type="text" id="securityCode" name="securityCode" required>
+                    </div>
+                </div>
+
+                <!-- Donate Amount field -->
+                <div class="form-group">
+                    <label for="donateAmount" style="color: #35a9b6; font-weight: bold;">Donate Amount ($)</label>
+                    <input type="number" id="donateAmount" name="donateAmount" min="1" required style="width: calc(100% - 20px); padding: 10px; border: 1px solid #35a9b6; border-radius: 5px; transition: border-color 0.3s ease; color: #537991; margin-bottom: 10px; font-size: 16px;">
+                </div>
+
+                <div style="display: flex; justify-content: center;">
+                    <button id="donateButton" type="submit" style="background-color: #35a9b6; color: #fff; border: none; padding: 12px 24px; border-radius: 25px; cursor: pointer; transition: background-color 0.3s ease;">
+                        <i class="fas fa-donate" style="margin-right: 5px;"></i> Donate Now
+                    </button>
+                </div>
+
+                <!-- Feedback messages -->
+                <div id="feedbackMessage" style="display: none; color: green; margin-top: 10px;">Thank you for your donation!</div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon" id="facebook-share"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" id="twitter-share"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" id="linkedin-share"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Youth for Youth. All rights reserved. </p>
+    </footer>
+
+    <script>
+        // Lazy loading of images
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            function lazyLoadImage(img) {
+                img.setAttribute('src', img.getAttribute('data-src'));
+                img.onload = function() {
+                    img.removeAttribute('data-src');
+                };
+            }
+            
+            const imgObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        lazyLoadImage(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            images.forEach(image => {
+                imgObserver.observe(image);
+            });
+        });
+
+        // Smooth scrolling behavior
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+
+        // Form validation
+        document.addEventListener("DOMContentLoaded", function() {
+            const donationForm = document.getElementById('donationForm');
+            const feedbackMessage = document.getElementById('feedbackMessage');
+
+            donationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Add your form validation logic here
+                // For simplicity, let's assume the form is always valid
+                // and show the feedback message
+                feedbackMessage.style.display = 'block';
+                setTimeout(function() {
+                    feedbackMessage.style.display = 'none';
+                }, 3000); // Hide feedback message after 3 seconds
+                donationForm.reset(); // Reset the form after submission
+            });
+        });
+
+        // Show/Hide payment fields based on selected payment type
+        document.addEventListener("DOMContentLoaded", function() {
+            const paymentTypeSelect = document.getElementById('paymentType');
+            const eCheckFields = document.getElementById('eCheckFields');
+            const creditCardFields = document.getElementById('creditCardFields');
+
+            paymentTypeSelect.addEventListener('change', function() {
+                eCheckFields.style.display = 'none';
+                creditCardFields.style.display = 'none';
+
+                if (this.value === 'eCheck') {
+                    eCheckFields.style.display = 'block';
+                } else if (this.value === 'creditCard') {
+                    creditCardFields.style.display = 'block';
+                }
+            });
+
+            // Add animations and functionality to the Donate button
+            const donateButton = document.getElementById('donateButton');
+            donateButton.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#537991';
+                this.style.transform = 'scale(1.1)';
+            });
+
+            donateButton.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#35a9b6';
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

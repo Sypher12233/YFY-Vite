@@ -71,6 +71,7 @@ label {
     padding: 1em;
     transition: border-color 0.3s ease;
     width: calc(100% - 22px);
+    font-size: 1.1vw;
 }
 
 .membership-form input:focus,

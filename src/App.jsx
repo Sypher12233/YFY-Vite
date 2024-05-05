@@ -9,7 +9,7 @@ import Resources from "./pages/Resources";
 import Scholarships from "./pages/Scholarships";
 import Events from "./pages/Events";
 import AboutUs from "./pages/AboutUs";
-// import SupportUs from "./pages/SupportUs";
+import SupportUs from "./pages/SupportUs";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           {/* <Route path="resources/newsletter" element={<Newsletter />} /> */}
 
           <Route path="contact-us" element={<ContactUs />} />
-          {/* <Route path="support-us" element={<SupportUs />} /> */}
+          <Route path="support-us" element={<SupportUs />} />
         </Route>
       </Routes>
     </Router>

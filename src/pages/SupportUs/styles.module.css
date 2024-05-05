@@ -1,0 +1,206 @@
+/* Reset styles */
+/* *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Global styles */
+.hero {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #75d4e0, #35a9b6, #537991);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Hero section styles */
+.hero {
+    text-align: center;
+    padding: 13vw 0 5vw;
+    animation: fadeIn 1s ease-in-out;
+    font-family: 'Charm', cursive;
+}
+
+.hero-content {
+    max-width: 57.5vw;
+    margin: 0 auto;
+    padding: 2vw;
+    background-color: #35a9b6;
+    border-radius: .72vw;
+}
+
+.hero-content h1 {
+    font-size: 2vw;
+    padding: 2vw 0;
+}
+
+.hero p {
+    font-size: 1.5vw;
+    margin-bottom: 1.5vw;
+    animation: slideRight 1s ease-in-out;
+    text-align: justify;
+    line-height: 4vw;
+}
+
+/* Form styles */
+.donation-form {
+    max-width: 43vw;
+    margin: 5vw auto;
+    padding: 3vw 1.5vw 2vw;
+    background-color: #ffffff;
+    border-radius: .72vw;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-bottom: 3.6vw;
+    /* Add margin between form and footer */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form h2 {
+    font-size: 2vw;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 2vw 0;
+}
+
+.fas {
+    margin-right: 5px;
+}
+
+.donationFeedbackMessage {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.1vw;
+    color: #35a9b6;
+}
+
+.donationForm label {
+    display: block;
+    margin-bottom: .35vw;
+}
+
+.donationForm input[type="text"],
+.donationForm input[type="email"],
+.donationForm input[type="tel"],
+.donationForm input[type="number"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #35a9b6;
+    /* Change border color to #35a9b6 */
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    color: #000;
+    /* Font color */
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.donationForm input[type="text"]:focus,
+.donationForm input[type="email"]:focus,
+.donationForm input[type="tel"]:focus,
+.donationForm input[type="number"]:focus,
+.donationForm select:focus {
+    outline: none;
+    border-color: #537991;
+}
+
+.donationSubmit {
+    display: flex;
+    justify-content: center;
+}
+
+.donationForm button[type="submit"] {
+    background-color: #35a9b6;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donationForm button[type="submit"]:hover {
+    background-color: #537991;
+}
+
+
+/* Payment fields */
+.payment-details {
+    display: none;
+    /* Initially hide payment fields */
+}
+
+/* Donate Amount field */
+#donateAmount {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #35a9b6;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    color: #537991;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#donateAmount:focus {
+    outline: none;
+    border-color: #537991;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    /* Add your responsive styles here */
+}
